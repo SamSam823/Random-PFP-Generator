@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Profile Picture</title>
+</head>
+<body>
+    <h1>Dynamic Profile Picture</h1>
+    <img id="profile-pic" alt="Dynamic Profile Picture" width="200" />
+
+    <script>
+        
+        const randomSeed = Math.random().toString(36).substring(7);
+
+        
+        const apiUrl = `https://robohash.org/${randomSeed}`;
+        document.getElementById("profile-pic").src = apiUrl;
+    </script>
+</body>
+</html>
+
